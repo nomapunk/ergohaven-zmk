@@ -127,6 +127,13 @@
             bindings = <&kp LEFT_ALT &kp RIGHT_ALT &kp F4>;
             label = "S4";
         };
+
+        s5: s5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp RIGHT_ALT &kp F5>;
+            label = "S5";
+        };
     };
 
     keymap {
