@@ -86,39 +86,32 @@
             tap-ms = <30>;
         };
 
-        s1: s1 {
+        mprev: s1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp RIGHT_ALT &kp F1>;
+            bindings = <&mkp MB4>;
             label = "S1";
         };
 
-        s2: s2 {
+        mnext: s2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp RIGHT_ALT &kp F2>;
+            bindings = <&mkp MB5>;
             label = "S2";
         };
 
-        s3: s3 {
+        mprev2: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp RIGHT_ALT &kp F3>;
-            label = "S3";
+            bindings = <&kp LEFT_SHIFT &mkp MB4>;
+            label = "NEW_MACRO";
         };
 
-        s4: s4 {
+        mnext2: mnext2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp RIGHT_ALT &kp F4>;
-            label = "S4";
-        };
-
-        s5: s5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp RIGHT_ALT &kp F5>;
-            label = "S5";
+            bindings = <&kp LEFT_SHIFT &mkp MB5>;
+            label = "MNEXT2";
         };
     };
 
@@ -149,7 +142,7 @@
         nav {
             bindings = <
 &trans  &kp N1  &kp N2    &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7        &kp N8         &kp N9       &kp N0         &trans
-&trans  &s1     &s2       &s3      &s4      &s5                        &trans       &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
+&trans  &mprev  &mprev2   &mnext2  &mnext   &trans                     &trans       &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
 &trans  &trans  &kp HOME  &kp INS  &kp END  &kp DEL                    &trans       &kp LC(LEFT)  &kp PAGE_DOWN  &kp PAGE_UP  &kp LC(RIGHT)  &trans
                 &trans    &trans   &trans   &trans   &trans    &trans  &lt 5 ENTER  &trans        &trans         &trans
             >;
