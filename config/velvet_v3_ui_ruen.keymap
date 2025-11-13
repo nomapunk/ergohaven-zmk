@@ -10,23 +10,6 @@
 
 / {
     behaviors {
-        cap_sen: cap_sen {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CAP_SEN";
-            bindings = <&mo>, <&mkp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            hold-while-undecided;
-        };
-
-        mouse_layer: mouse_layer {
-            compatible = "zmk,behavior-sticky-key";
-            label = "MOUSE_LAYER";
-            bindings = <&mo>;
-            #binding-cells = <1>;
-            release-after-ms = <200>;
-        };
     };
 
     combos {
@@ -110,20 +93,6 @@
             #binding-cells = <0>;
             bindings = <&mkp MB5>;
             label = "S2";
-        };
-
-        mprev2: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &mkp MB4>;
-            label = "NEW_MACRO";
-        };
-
-        mnext2: mnext2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &mkp MB5>;
-            label = "MNEXT2";
         };
     };
 
@@ -229,7 +198,7 @@
     };
 };
 
-&trackball { cpi = <1000>; };
+&trackball { cpi = <400>; };
 
 &trackball_listener {
     input-processors = <&zip_xy_scaler 9 20>;
