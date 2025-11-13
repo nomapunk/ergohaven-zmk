@@ -14,7 +14,7 @@
 
         cmben {
             bindings = <&layer_en>;
-            key-positions = <41 37>;
+            key-positions = <41 36>;
         };
 
         cmbru {
