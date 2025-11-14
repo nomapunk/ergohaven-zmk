@@ -13,13 +13,13 @@
         compatible = "zmk,combos";
 
         cmben {
-            bindings = <&layer_en>;
+            bindings = <&to 0>;
             key-positions = <41 37>;
         };
 
         cmbru {
-            bindings = <&layer_ru>;
-            key-positions = <41 37>;
+            bindings = <&to 1>;
+            key-positions = <41 36>;
         };
     };
 
